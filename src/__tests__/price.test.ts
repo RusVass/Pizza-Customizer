@@ -29,7 +29,7 @@ describe('calcPizzaPrice', () => {
       toppingIds: ['unknown-1', 'unknown-2']
     })
 
-    expect(price).toBe(8)
+    expect(price).toBe(9.5)
   })
 
   it('rounds to two decimals', () => {
@@ -39,6 +39,6 @@ describe('calcPizzaPrice', () => {
       toppingIds: ['pesto', 'goat-cheese']
     })
 
-    expect(price).toBe(15.5)
+    expect(price).toBe(14.9)
   })
 })

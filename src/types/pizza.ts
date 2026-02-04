@@ -35,9 +35,4 @@ export interface Pizza {
   updatedAt: string
 }
 
-export interface PizzaDraft {
-  name: string
-  sizeId: PizzaSize['id']
-  doughId: DoughOption['id']
-  toppingIds: string[]
-}
+export type PizzaDraft = Omit<Pizza, 'id' | 'createdAt' | 'updatedAt'>

@@ -20,8 +20,9 @@
           const prefersDark =
             window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
           const resolved = mode === 'system' ? (prefersDark ? 'dark' : 'light') : mode
-          document.documentElement.classList.toggle('dark', resolved === 'dark')
-          document.documentElement.style.colorScheme = resolved
+          const root = document.documentElement
+          root.classList.toggle('dark', resolved === 'dark')
+          root.style.colorScheme = resolved
         } catch {
           document.documentElement.classList.remove('dark')
           document.documentElement.style.colorScheme = 'light'
